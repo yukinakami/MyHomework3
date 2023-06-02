@@ -6,6 +6,7 @@ android {
     namespace 'com.example.myhomework3'
     compileSdk 33
 
+
     defaultConfig {
         applicationId "com.example.myhomework3"
         minSdk 24
@@ -20,6 +21,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            packagingOptions {
+                exclude 'META-INF/DEPENDENCIES'
+            }
         }
     }
     compileOptions {
@@ -33,7 +37,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jsoup:jsoup:1.16.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.alibaba:fastjson:1.2.76' //
+    implementation 'org.apache.httpcomponents:httpclient:4.3.6'
 }
+
+
+
